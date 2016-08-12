@@ -34,7 +34,7 @@ body <-
                   br(),
                   "Your answers here will be used to help match you with compatible team members.",
                   br(), 
-                  "0 means you don't agree at all, 10 means you agree so much it hurts!",
+                  "0 means this is a crazy statement which is nothing like you at all, 10 means you agree so much it hurts!",
                   br(),br(),
                   sliderInput(inputId = "win",
                               label = "I want to win the hackathon",

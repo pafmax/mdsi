@@ -77,10 +77,15 @@ body <-
                                              "3+" = 3)
                              ),
                   "Thanks for entering your information - please click 'submit' below to add your details to the database.",
+                  br(),
+                  br(),
                   actionButton(inputId = "submit",
                                label = "Submit",
                                icon = icon("check")),
-                  textOutput("submitResult")
+                  br(),
+                  br(),
+                  textOutput("submitResult"),
+                  br()
               )
       ),
       tabItem(tabName = "similar",
@@ -89,6 +94,7 @@ body <-
                   solidHeader = T,
                   status = "primary",
                   uiOutput("name_selector"),
+                  hr(),
                   plotlyOutput("plot")
               )
       )

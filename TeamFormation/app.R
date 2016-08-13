@@ -289,6 +289,7 @@ server <- shinyServer(function(input, output) {
     }
     subset <- people[,-c(2:6)]
     names(subset) <- c("Name", "Languages", "Skills", "Hackathons", "Distance")
+    subset[subset$Hackathons == 3,"Hackathons"] <- "3+"
     return(subset)
   })
    

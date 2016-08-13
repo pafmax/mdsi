@@ -171,7 +171,8 @@ server <- shinyServer(function(input, output) {
   # into a data frame. It is within a reactive context so that it can be 
   # re-triggered when things change (like when someone adds a new entry)
   getPeopleList <- reactive({
-    dummy <- eventReactive(input$submit,{}) # Triggers recalculation
+    dummy <- input$name 
+    # This will detect the addition of a new entry, and force a recalculation.
     files <- list.files(path = "people/", full.names = T)
     for (i in seq_along(files)) {
       if (i == 1) {
